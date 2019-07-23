@@ -1,0 +1,933 @@
+/*Шрифты: font-weight
+light-300; regular-400; medium-500; semibold-600; bold-700; extrabold-800*/
+
+@font-face {
+    font-family: 'fontello';
+    src: url('../fonts/font/fontello.eot?69084296');
+    src: url('../fonts/font/fontello.eot?69084296#iefix') format('embedded-opentype'),
+    url('../fonts/font/fontello.woff2?69084296') format('woff2'),
+    url('../fonts/font/fontello.woff?69084296') format('woff'),
+    url('../fonts/font/fontello.ttf?69084296') format('truetype'),
+    url('../fonts/font/fontello.svg?69084296#fontello') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+/* Chrome hack: SVG is rendered more smooth in Windozze. 100% magic, uncomment if you need it. */
+/* Note, that will break hinting! In other OS-es font will be not as sharp as it could be */
+/*
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: 'fontello';
+    src: url('../font/fontello.svg?69084296#fontello') format('svg');
+  }
+}
+*/
+
+[class^="icon-"]:before, [class*=" icon-"]:before {
+    font-family: "fontello";
+    font-style: normal;
+    font-weight: normal;
+    speak: none;
+
+    display: inline-block;
+    text-decoration: inherit;
+    width: 1em;
+    margin-right: .2em;
+    text-align: center;
+    /* opacity: .8; */
+
+    /* For safety - reset parent styles, that can break glyph codes*/
+    font-variant: normal;
+    text-transform: none;
+
+    /* fix buttons height, for twitter bootstrap */
+    line-height: 1em;
+
+    /* Animation center compensation - margins should be symmetric */
+    /* remove if not needed */
+    margin-left: .2em;
+
+    /* you can be more comfortable with increased icons size */
+    /* font-size: 120%; */
+
+    /* Font smoothing. That was taken from TWBS */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    /* Uncomment for 3D effect */
+    /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+}
+
+.icon-twitter:before { content: '\e800'; } /* '' */
+.icon-dribbble:before { content: '\e802'; } /* '' */
+.icon-facebook:before { content: '\f052'; } /* '' */
+.icon-gplus:before { content: '\f30f'; } /* '' */
+.icon-linkedin:before { content: '\f318'; } /* '' */
+
+@font-face {
+    font-family: 'Lato';
+    src: url('../fonts/Lato-Bold.eot');
+    src: url('../fonts/Lato-Bold.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/Lato-Bold.woff2') format('woff2'),
+    url('../fonts/Lato-Bold.woff') format('woff'),
+    url('../fonts/Lato-Bold.ttf') format('truetype'),
+    url('../fonts/Lato-Bold.svg#Lato-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    src: url('../fonts/OpenSans-Bold.eot');
+    src: url('../fonts/OpenSans-Bold.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/OpenSans-Bold.woff2') format('woff2'),
+    url('../fonts/OpenSans-Bold.woff') format('woff'),
+    url('../fonts/OpenSans-Bold.ttf') format('truetype'),
+    url('../fonts/OpenSans-Bold.svg#OpenSans-Bold') format('svg');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    src: url('../fonts/OpenSans-ExtraboldItalic.eot');
+    src: url('../fonts/OpenSans-ExtraboldItalic.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/OpenSans-ExtraboldItalic.woff2') format('woff2'),
+    url('../fonts/OpenSans-ExtraboldItalic.woff') format('woff'),
+    url('../fonts/OpenSans-ExtraboldItalic.ttf') format('truetype'),
+    url('../fonts/OpenSans-ExtraboldItalic.svg#OpenSans-ExtraboldItalic') format('svg');
+    font-weight: 800;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    src: url('../fonts/OpenSans-Semibold.eot');
+    src: url('../fonts/OpenSans-Semibold.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/OpenSans-Semibold.woff2') format('woff2'),
+    url('../fonts/OpenSans-Semibold.woff') format('woff'),
+    url('../fonts/OpenSans-Semibold.ttf') format('truetype'),
+    url('../fonts/OpenSans-Semibold.svg#OpenSans-Semibold') format('svg');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    src: url('../fonts/OpenSans-SemiboldItalic.eot');
+    src: url('../fonts/OpenSans-SemiboldItalic.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/OpenSans-SemiboldItalic.woff2') format('woff2'),
+    url('../fonts/OpenSans-SemiboldItalic.woff') format('woff'),
+    url('../fonts/OpenSans-SemiboldItalic.ttf') format('truetype'),
+    url('../fonts/OpenSans-SemiboldItalic.svg#OpenSans-SemiboldItalic') format('svg');
+    font-weight: 600;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    src: url('../fonts/OpenSans-Italic.eot');
+    src: url('../fonts/OpenSans-Italic.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/OpenSans-Italic.woff2') format('woff2'),
+    url('../fonts/OpenSans-Italic.woff') format('woff'),
+    url('../fonts/OpenSans-Italic.ttf') format('truetype'),
+    url('../fonts/OpenSans-Italic.svg#OpenSans-Italic') format('svg');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    src: url('../fonts/OpenSans-Extrabold.eot');
+    src: url('../fonts/OpenSans-Extrabold.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/OpenSans-Extrabold.woff2') format('woff2'),
+    url('../fonts/OpenSans-Extrabold.woff') format('woff'),
+    url('../fonts/OpenSans-Extrabold.ttf') format('truetype'),
+    url('../fonts/OpenSans-Extrabold.svg#OpenSans-Extrabold') format('svg');
+    font-weight: 800;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    src: url('../fonts/OpenSans-Light.eot');
+    src: url('../fonts/OpenSans-Light.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/OpenSans-Light.woff2') format('woff2'),
+    url('../fonts/OpenSans-Light.woff') format('woff'),
+    url('../fonts/OpenSans-Light.ttf') format('truetype'),
+    url('../fonts/OpenSans-Light.svg#OpenSans-Light') format('svg');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    src: url('../fonts/OpenSans.eot');
+    src: url('../fonts/OpenSans.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/OpenSans.woff2') format('woff2'),
+    url('../fonts/OpenSans.woff') format('woff'),
+    url('../fonts/OpenSans.ttf') format('truetype'),
+    url('../fonts/OpenSans.svg#OpenSans') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    src: url('../fonts/OpenSans-BoldItalic.eot');
+    src: url('../fonts/OpenSans-BoldItalic.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/OpenSans-BoldItalic.woff2') format('woff2'),
+    url('../fonts/OpenSans-BoldItalic.woff') format('woff'),
+    url('../fonts/OpenSans-BoldItalic.ttf') format('truetype'),
+    url('../fonts/OpenSans-BoldItalic.svg#OpenSans-BoldItalic') format('svg');
+    font-weight: bold;
+    font-style: italic;
+}
+html {
+    font-size: 10px;
+    scroll-behavior: smooth;
+}
+a {
+    color: inherit;
+}
+/*шапка с меню*/
+header{
+    height: 100vh;
+    background: #111111;
+    position: relative;
+}
+section {
+    padding: 100px 0;
+}
+nav {
+    font-family: 'Lato';
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-transform: uppercase;
+    padding-top: 78px;
+    background: #111111;
+    opacity: 0.70;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 2;
+}
+.menu-btn {
+    display: block;
+    width: 40px;
+    height: 40px;
+    background: white;
+    border-radius: 50px;
+    position: relative;
+    z-index: 3;
+}
+.menu-btn span, .menu-btn span:before, .menu-btn span:after {
+    /*мы задаем ширину и высоту для всех состояний спана разом*/
+    display: block;
+    width: 20px;
+    height: 2px;
+    background: black;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -10px;
+    /*отнимаем половину ширины круга(кнопки) когда используешь 'calc'*/
+    margin-top: -1px;
+    /*отнимаем от маржина половину толщины спана*/
+}
+.menu-btn span:before, .menu-btn span:after {
+    content: '';
+}
+.menu-btn span:before {
+    transform: translateY(-5px);
+}
+.menu-btn span:after {
+    transform: translateY(5px);
+}
+.mobile-menu {
+    display: none;
+    position: absolute;
+    right: 20%;
+    /*убирает абсоютно все освобождая место в отличии от 'opacity'*/
+}
+.logo {
+    display: inline-block;
+    position: absolute;
+    top: 55px;
+    left: 180px;
+    font-size: 2.4rem;
+    color: #fff;
+    font-weight: 700;
+}
+.logo:hover {
+    text-decoration: none;
+    color: white;
+}
+.menu-wrap {
+    position: absolute;
+    top: 60px;
+    right: 179px;
+    font-size: 1.4rem;
+    color: #fff;
+    font-weight: 700;
+}
+.main-menu li {
+    display: inline-block;
+    margin-right: 24px;
+}
+.main-menu li:last-child {
+    margin-right: 0;
+}
+.main-menu li a {
+    color: #fff;
+    position: relative;
+    text-decoration: none;
+}
+.main-menu li a:before, .main-menu li a:after {
+    content: '';
+    display: inline-block;
+    height: 3px;
+    background: gray;
+    position: absolute;
+    bottom: -10px;
+}
+.main-menu li a:after {
+    background: #fcac45;
+}
+.main-menu li:hover a:before {
+    width: 50%;
+    left: 0;
+}
+.main-menu li:hover a:after {
+    width: 50%;
+    left: 50%;
+}
+/*главный текст с подтекстом*/
+.title {
+    width: 100%;
+    position: absolute;
+    top: 37%;
+    left: -20px;
+    text-align: center;
+}
+.title h2 {
+    padding-bottom: 14px;
+    color: #999999;
+    text-transform: uppercase;
+    font-size: 4.3rem;
+    word-spacing: -1px;
+    letter-spacing: -1.3px;
+    font-weight: 300;
+    font-family: "Open Sans";
+}
+.title h2 span {
+    font-family: "Lato";
+    color: #fcac45;
+}
+.title p {
+    font-size: 1.8rem;
+    letter-spacing: 0.05px;
+    word-spacing: -0.5px;
+    color: rgba(255, 255, 255, 0.749);
+    font-family: "Open Sans";
+}
+.title p span {
+    font-weight: 700;
+}
+.click {
+    position: absolute;
+    bottom: 88px;
+    left: calc(50% - 44.6px);
+    height: 50px;
+    width: 50px;
+    border: 2px solid #FFF;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.page_down a {
+    color: #c3c3c3;
+}
+/*section about us*/
+#about_us{
+    padding-bottom: 105px;
+}
+.about_img {
+    position: absolute;
+    top: 2px;
+    left: 2px;
+}
+.about {
+    font-family: "Open Sans";
+    color: rgb(108, 108, 108);
+    margin-left: 99px;
+}
+.subtitle {
+    font-family: "Open Sans";
+    font-weight: 400;
+    font-size: 2rem;
+    text-transform: uppercase;
+}
+.about_title {
+    font-size: 3.4rem;
+    color: #222222;
+    margin: 10px 0 46px;
+    position: relative;
+    letter-spacing: -1px;
+    word-spacing: 1px;
+}
+.about_title span {
+    font-weight: 700;
+}
+.about_title:before {
+    content: "";
+    width: 97px;
+    height: 3px;
+    background: darkorange;
+    position: absolute;
+    bottom: -20px;
+}
+.about_content {
+    font-family: "Open Sans";
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 1.6;
+    letter-spacing: 0.15px;
+}
+.list-items {
+    font-family: "Open Sans";
+    font-style: italic;
+    font-size: 1.6rem;
+    color: #5a5a5a;
+    margin-top: 41px;
+    margin-bottom: 39px;
+    letter-spacing: -0.1px;
+}
+.list-items span {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1.8rem;
+    margin-left: 10px;
+}
+.list-items li {
+    padding-bottom: 15px;
+}
+/*кнопочка browse*/
+.case_btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    font-family: "Open Sans";
+    font-weight: 600;
+    color: #616161;
+    border: 1px solid gray;
+    border-radius: 4px;
+    width: 194px;
+    height: 45px;
+}
+.about a i {
+    position: relative;
+    left: -10px;
+}
+.about a span {
+    margin-right: -3px;
+}
+a:hover{
+    text-decoration: none;
+}
+/*section our team ЧИТАЙ про БЭМ!!!*/
+#our_team {
+    padding-bottom: 153px;
+}
+.blackfon {
+    background: black;
+}
+.subject {
+    width: 100%;
+    position: relative;
+    text-align: center;
+    color: #fff;
+    font-size: 4.4rem;
+    font-family: "Open Sans";
+    font-weight: 300;
+    line-height: 24px;
+    margin-bottom: 145px;
+}
+.subject span {
+    font-weight: 600;
+}
+.subject:before, .subject:after {
+    content: "";
+}
+.subject:before {
+    width: 100px;
+    height: 4px;
+    background: #fcac45;
+    position: absolute;
+    left: calc(50% - 50px);
+    bottom: -39px;
+}
+.subject:after {
+    width: 66px;
+    height: 4px;
+    display: flex;
+    justify-content: center;
+    background: rgba(252, 172, 69, 0.702);
+    position: absolute;
+    left: calc(50% - 33px);
+    bottom: -54px;
+}
+/*строка с тимой*/
+.actors {
+    display: block;
+    text-align: center;
+    color: #fff;
+    font-family: "Open Sans";
+    font-weight: 700;
+}
+.our_team {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    margin: 0 auto;
+    overflow: hidden;
+}
+.our_team img {
+    width: 100%;
+    height: 100%;
+}
+.actors h2 {
+    font-size: 2rem;
+    padding: 24px 0 8px;
+}
+.actors span {
+    font-size: 1.6rem;
+    font-weight: 400;
+}
+.actors p {
+    font-size: 1.4rem;
+    font-weight: 400;
+    padding-top: 35px;
+    line-height: 1.714;
+}
+.owl-dots .owl-dot span {
+    display: inline-block;
+    width: 9px;
+    height: 9px;
+    margin-right: 13px;
+    background: #ffffff !important;
+}
+.owl-dots .owl-dot.active span {
+    background: #fcac45 !important;
+}
+.owl-dots {
+    position: absolute;
+    bottom: -71px;
+    left: calc(50% - 26px);
+}
+:focus {
+    outline: none;
+}
+/*section services*/
+.black {
+    color: #000;
+}
+.margin {
+    margin-bottom: 92px;
+}
+.text-center p {
+    font-size: 1.6rem;
+    font-family: "Open Sans";
+    font-style: italic;
+    line-height: 1.5;
+    color: #6c6c6c;
+    margin-bottom: 105px;
+}
+.our_services {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #000;
+    font-family: "Open Sans";
+}
+.our_services h2 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin: 29px 0 20px;
+}
+.our_services p {
+    font-size: 1.4rem;
+    font-weight: 400;
+}
+.circle_icon {
+    border-radius: 50%;
+    border: 5px solid #fcac45;
+    width: 125px;
+    height: 125px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.icon {
+    font-size: 5rem;
+}
+/*сверстать включая плитку*/
+/*section our clients*/
+#our_clients {
+    padding-bottom: 210px;
+}
+#our_clients .margin {
+    margin-bottom: 155px;
+}
+#our_clients .subject:before {
+    bottom: -42px;
+}
+#our_clients .subject:after {
+    bottom: -58px;
+}
+#our_clients .owl-dots {
+    bottom: -110px;
+}
+.clients {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 4.2rem;
+    color: #b6b6b6;
+}
+/*section portfolio*/
+#portfolio .subject:before {
+    bottom: -42px;
+}
+#portfolio .subject:after {
+    bottom: -56px;
+}
+.filter {
+    display: inline;
+    font-family: "Open Sans";
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+.position_menu {
+    position: absolute;
+    right: 11%;
+}
+.menu {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 51px;
+}
+.menu_list {
+    display: flex;
+    flex-direction: row;
+}
+.menu_list li {
+    padding-right: 15px;
+    margin-right: 13px;
+    border-right: 1px solid #6c6c6c;
+    font-size: 1.8rem;
+    font-family: "Open Sans";
+    color: #6c6c6c;
+}
+.menu_list a:hover {
+    color: #000;
+}
+.menu_list li:last-child {
+    padding-right: 0;
+    margin-right: 0;
+    border-right: none;
+}
+/*верстаем плитки*/
+
+.work-content{
+    margin-top: 30px;
+    width: 100%;
+    height: 236px;
+    position: relative;
+    overflow: hidden;
+}
+.first_row .work-content:first-child {
+    margin-top: 0;
+}
+.work-content img{
+    height: 100%;
+    width: 100%;
+    /*object-fit: contain;*/
+    /*если ставить object-fit: contain и регулировать высоту то изза свойства квадрат не увелитчится в высоту а просто будет уезжать вниз*/
+}
+
+.work-content-text{
+    height: 100%;
+    width: 100%;
+    background: black;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    line-height: 1.2;
+    font-family: "Open Sans";
+    font-weight: 600;
+    top: 240px;
+    left: 0;
+    opacity: 0;
+    transition: all 0.5s;
+
+}
+.work-content-text span {
+    text-transform: uppercase;
+    font-size: 2rem;
+    font-weight: 600;
+}
+.work-content-text p {
+    padding-top: 12px;
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #b2b2b2;
+}
+
+.circle{
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    border: 2px solid #fcac45;
+    margin-top: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fcac45;
+}
+.circle a {
+    color: #fcac45;
+}
+.work-content:hover .work-content-text {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    opacity: 1;
+}
+/*верстай дальше!*/
+/*section testimonials*/
+#testimonials {
+    padding-bottom: 172px;
+}
+#testimonials .subject {
+    margin-bottom: 180px;
+    line-height: 0;
+    top: 11%;
+    font-size: 4.3rem;
+}
+#testimonials .subject:before {
+    bottom: -51px;
+}
+#testimonials .subject:after {
+    bottom: -64px;
+}
+.testimonials_text p {
+    /*display: flex;*/
+    /*justify-content: center;*/
+    /*align-items: center;*/
+    position: relative;
+    text-align: center;
+    text-transform: uppercase;
+    color: #e7e7e7;
+    font-size: 1.8rem;
+    line-height: 1.39;
+    font-family: "Open Sans";
+    font-weight: 600;
+    padding-bottom: 44px;
+    word-spacing: -0.9px;
+}
+.testimonials_text h5 {
+    display: flex;
+    justify-content: center;
+    color: #b2b2b2;
+    font-family: "Open Sans";
+    font-size: 1.8rem;
+    font-weight: 300;
+}
+.testimonials_text span {
+    font-weight: 600;
+}
+/*section contacts*/
+.contacts_text {
+    font-size: 1.6rem;
+    font-family: "Open Sans";
+    color: rgb(108, 108, 108);
+    font-style: italic;
+    line-height: 1.5;
+    text-align: center;
+}
+.contacts-form {
+    margin-top: 95px;
+}
+.col-md_6 {
+    -ms-flex: 0 0 50%;
+    flex: 0 0 50%;
+    max-width: 50%;
+}
+.form_row {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+.col-md_6 {
+    position: relative;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+.form-group {
+    font-size: 1.4rem;
+    font-family: "Open Sans";
+    color: #636363;
+    margin-bottom: 31px;
+}
+.form-group span {
+    color: red;
+}
+.btn {
+    width: 165px;
+    height: 40px;
+    position: relative;
+    left: calc(100% - 165px);
+    color: #fff;
+    font-family: "Open Sans";
+    font-weight: 600;
+    font-size: 1.6rem;
+    background-color: #fcac45;
+    border-radius: 0;
+    border-color: #fcac45;
+}
+.btn:hover {
+    color: #fff;
+}
+.form-control {
+    padding: 20px 8px;
+    font-size: 1.4rem;
+    border: 1px solid #999999;
+}
+.form-text textarea{
+    width: 100%;
+    height: 163px;
+}
+.inputName, .inputEmail, .inputMessage {
+    padding-bottom: 10px;
+}
+/*footer*/
+footer {
+    height: 93px;
+    background: #222222;
+}
+.footer {
+    color: #b2b2b2;
+    font-size: 1.2rem;
+    font-family: "Open Sans";
+    display: flex;
+    justify-content: space-between;
+    padding-top: 43px;
+}
+.list_icon_circle {
+    height: 28px;
+    width: 28px;
+    border-radius: 50%;
+    border: 3px solid #b2b2b2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.footer-menu {
+    display: flex;
+    flex-direction: row;
+}
+.footer-menu li {
+    padding: 0 7px 0 7px;
+}
+.footer-menu li:last-child {
+    padding: 0 0 0 7px;
+}
+
+/*Сделать адаптивность через медизапросы*/
+
+@media (max-width: 992px) {
+    .subject:before, .subject:after {
+        content: "";
+    }
+    .subject:before {
+        width: 100px;
+        height: 4px;
+        background: #fcac45;
+        position: absolute;
+        left: calc(50% - 50px);
+        bottom: -30px;
+    }
+    .subject:after {
+        width: 66px;
+        height: 4px;
+        display: flex;
+        justify-content: center;
+        background: rgba(252, 172, 69, 0.702);
+        position: absolute;
+        left: calc(50% - 33px);
+        bottom: -45px;
+    }
+    .mobile-menu {
+        display: block;
+    }
+    .menu-btn.menu-active span:before {
+        transform: rotate(-45deg);
+        width: 10px;
+        transform-origin: left bottom;
+        transition: 0.9s ease;
+    }
+    .menu-btn.menu-active span:after {
+        transform: rotate(45deg);
+        width: 10px;
+        transform-origin: left top;
+        transition: 0.9s ease;
+    }
+    .menu-wrap {
+        visibility: hidden;
+        position: fixed;
+    }
+    .menu-wrap.menu-active {
+        visibility: visible;
+        background: black;
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        left: 0;
+        top: 0;
+        display: flex;
+        transition: all 0.9s ease;
+    }
+    .menu-wrap.menu-active .main-menu li {
+        display: block;
+        text-align: center;
+        margin-top: 20px;
+        margin-right: 0;
+    }
+    /*убрать баг прыжка, плавное появление */
+    .menu-wrap.menu-active .main-menu {
+        margin: auto;
+    }
+    .about {
+        margin-left: 0;
+    }
+}
+
+@media (max-width: 576px) {
+
+}
